@@ -8,6 +8,10 @@ const app = express();
 app.use(express.json());//
 app.use(cookieParser());
 
+app.get('/test', (req, res) => {
+  res.send('test').status(400);
+})
+
 app.use('/api', apiRoutes);
 
 app.set('port', process.env.PORT || 5000);
