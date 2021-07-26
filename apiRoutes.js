@@ -66,7 +66,7 @@ router.post('/signup', (req, res) => {
       });
       res
         .cookie('noteLystToken', token, {
-          domain: '.rickvarela.com',
+          domain: 'www.rickvarela.com',
           httpOnly: true,
         })
         .sendStatus(200);
@@ -98,7 +98,7 @@ router.post('/auth', (req, res) => {
           });
           res
             .cookie('noteLystToken', token, {
-              domain: '.rickvarela.com',
+              domain: 'www.rickvarela.com',
               httpOnly: true,
             })
             .sendStatus(200);
