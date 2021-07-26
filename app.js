@@ -12,6 +12,10 @@ app.get('/test', (req, res) => {
   res.send('test').status(400);
 })
 
+app.get('/test2', (req, res) => {
+  res.send(process.env.TEST).status(400);
+})
+
 app.use('/api', apiRoutes);
 
 app.set('port', process.env.PORT || 5000);
