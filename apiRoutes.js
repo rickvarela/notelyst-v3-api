@@ -64,7 +64,12 @@ router.post('/signup', (req, res) => {
       const token = jwt.sign(payload, process.env.SECRET, {
         expiresIn: '1h',
       });
-      res.cookie('noteLystToken', token, { httpOnly: true }).sendStatus(200);
+      res
+        .cookie('noteLystToken', token, {
+          domain: '.rickvarela.com',
+          httpOnly: true,
+        })
+        .sendStatus(200);
     }
   });
 });
@@ -91,7 +96,12 @@ router.post('/auth', (req, res) => {
           const token = jwt.sign(payload, process.env.SECRET, {
             expiresIn: '1h',
           });
-          res.cookie('noteLystToken', token, { httpOnly: true }).sendStatus(200);
+          res
+            .cookie('noteLystToken', token, {
+              domain: '.rickvarela.com',
+              httpOnly: true,
+            })
+            .sendStatus(200);
         }
       });
     }
