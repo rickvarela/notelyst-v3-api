@@ -74,6 +74,7 @@ router.post('/auth', (req, res) => {
   console.log('auth');
   User.findOne({ username }, (error, user) => {
     if (error) {
+      console.log(error);
       res.status(500).json({
         error: 'Internal error please try again',
       });
