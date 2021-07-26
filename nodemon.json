@@ -1,8 +1,0 @@
-{
-    "env": {
-        "MONGO_USER": "projectUser",
-        "MONGO_PASSWORD": "dn9mPO3zTf6YI4PX",
-        "MONGO_DB": "NoteLyst",
-        "SECRET": "otnRtxnEJjYKEbdsakI7qffzs4" 
-    }
-}
