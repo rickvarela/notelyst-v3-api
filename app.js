@@ -8,9 +8,9 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
-
-app.options('*', cors());
+app.use(cors({
+  origin: 'https://www.rickvarela.com'
+}));
 
 app.get('/test', (req, res) => {
   res.send('test').status(400);
