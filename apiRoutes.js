@@ -25,8 +25,10 @@ const withAuth = (req, res, next) => {
 
 router.get('/checkauth', (req, res) => {
   const token = req.cookies.noteLystToken;
+  console.log(token);
   jwt.verify(token, process.env.SECRET, (error, decoded) => {
     if (error) {
+      console.log(error);
       res.status(200).json({
         authUser: null,
       });
